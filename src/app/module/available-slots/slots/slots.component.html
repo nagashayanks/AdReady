@@ -1,0 +1,14 @@
+<div class="slot-container">
+    <h3>Available Slots</h3>
+    <div class="grid-container">
+        <app-grid [gridData]="availableSlots" [gridColumnDefinition]="gridColumns"
+            (getAction)="getAction($event)" [sorting]="sorting" [pageLinks]="pageLinks" [pagination]="pagination"
+            *ngIf="availableSlots">
+        </app-grid>
+    </div>
+</div>
+<p-dialog header="Book Slot" [(visible)]="bookSlotflag">
+    Content
+</p-dialog>
+<app-spinner [spinner]="spinner"></app-spinner>
+<app-alert [alertObj]="common.alertConfig" *ngIf="common.alertConfig?.modalShow" (buttonAction)="modalAction($event)"></app-alert>

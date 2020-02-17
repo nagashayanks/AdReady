@@ -11,6 +11,10 @@ const routes: Routes = [
     {
       path: 'login',
       loadChildren: () => import(`./module/member/member.module`).then(m => m.MemberModule)
+    },
+    {
+      path: 'available-slots',
+      loadChildren: () => import(`./module/available-slots/available-slots.module`).then(m => m.AvailableSlotsModule)
     }
 ];
 

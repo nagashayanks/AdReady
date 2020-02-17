@@ -1,40 +1,22 @@
 {
-    "doctorList": [
+    "availableSlots": [
         {
-            "hours": 9,
-            "status": "successfull",
-           "data": "12-4-2020"
-            },
-         {
-            "hours": 9,
-            "status": "successfull",
-           "data": "12-4-2020"
-            }
-    ],
-    "bookedAppointmentsDoctor": [
-      {
+            "slotId": 1,
+            "date": "17-02-2020",
+            "fromTime": "12:30:00",
+            "toTime": "12:40:60",
+            "totalCost": 20000,
+            "planName": "Premium"
+        },
+        {
+            "slotId": 1,
+            "date": "17-02-2020",
+            "fromTime": "01:30:00",
+            "toTime": "01:40:60",
+            "totalCost": 40000,
+            "planName": "Premium"
+        }
 
-
-          "hospitalName":"Manipal",
-          "date":"12-4-2020",
-          "slotTime":"13:00",
-          "patientId":123,
-          "patientName":"Tanmoy",
-          "email":"t@gmail.com",
-          "mobile":9089567800
-
-      },
-      {
-
-
-        "hospitalName":"Aster",
-        "date":"13-4-2020",
-        "slotTime":"15:00",
-        "patientId":12453,
-        "patientName":"krishna",
-        "email":"k@gmail.com",
-        "mobile":9089784590
-
-    }]
+    ]
 }
  

@@ -4,6 +4,16 @@ export interface CurrentUser {
     userName: string;
 }
 
+export interface Slot {
+    slotId: number;
+    planName: string;
+    date: string;
+    fromTime: string;
+    toTime: string;
+    totalCost: number;
+}
+
+
 export interface DoctorSummary {
     doctorName: string;
     rating: number;

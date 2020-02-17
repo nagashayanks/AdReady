@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 @Injectable()
 export class UrlConfig {
-    serverConfig = true;
+    serverConfig = false;
     // 'http://10.117.189.177:9090/housepital/
-    private apiHost = 'http://10.117.189.55:9090/employeemanagement/';
+    private apiHost = 'http://10.117.189.55:9090/admanagement/';
     private apiMock = 'http://localhost:3000/';
     url = {};
 
@@ -14,6 +14,7 @@ export class UrlConfig {
             userRegister: this.apiMock + 'doctorList',
             schemes:  this.apiMock + 'timesheets',
             time: this.apiMock + 'timesheets',
+            availableSlots: this.apiMock + 'availableSlots',
         };
     }
     /* url config with url Server list */
@@ -23,6 +24,7 @@ export class UrlConfig {
             userRegister: this.apiHost + 'employees',
             schemes: 'http://10.117.189.55:9092/timesheetmanagement/' + 'timesheets',
             time: 'http://10.117.189.55:9092/timesheetmanagement/' + 'timesheets',
+            availableSlots: this.apiMock + 'sales/slots',
 
         };
     }
