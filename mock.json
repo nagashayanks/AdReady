@@ -34,5 +34,26 @@
             "email": "k@gmail.com",
             "mobile": 9089784590
         }
+    ],
+
+    "availableSlots": [
+        {
+            "slotId": 1,
+            "date": "17-02-2020",
+            "fromTime": "12:30:00",
+            "toTime": "12:40:60",
+            "totalCost": 20000,
+            "planName": "Premium"
+        },
+        {
+            "slotId": 1,
+            "date": "17-02-2020",
+            "fromTime": "01:30:00",
+            "toTime": "01:40:60",
+            "totalCost": 40000,
+            "planName": "Premium"
+        }
+
     ]
 }
+ 
