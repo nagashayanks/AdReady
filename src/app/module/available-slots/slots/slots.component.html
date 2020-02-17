@@ -7,7 +7,8 @@
         </app-grid>
     </div>
 </div>
-<p-dialog header="Book Slot" [(visible)]="bookSlotflag">
+<p-dialog header="Booking Slot" [(visible)]="bookSlotflag" [modal]="true" [style]="{width: '50vw'}" [maximizable]="true" [baseZIndex]="10000"
+[draggable]="false" [resizable]="false">
     Content
 </p-dialog>
 <app-spinner [spinner]="spinner"></app-spinner>

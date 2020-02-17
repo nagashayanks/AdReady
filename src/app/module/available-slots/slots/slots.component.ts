@@ -73,7 +73,7 @@ export class SlotsComponent implements OnInit {
 
   /* Get action from grid */
   public getAction(event) {
-    if (event.gridAction.action === 'Book') {
+    if (event.gridAction.btnName === 'Book') {
       this.bookSlotflag = true;
     }
   }
