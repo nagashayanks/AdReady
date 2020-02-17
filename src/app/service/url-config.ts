@@ -3,26 +3,25 @@ import { Injectable } from '@angular/core';
 export class UrlConfig {
     serverConfig = true;
     // 'http://10.117.189.177:9090/housepital/
-    private apiHost = 'http://10.117.189.55:9090/employeemanagement/';
+    private apiHost = 'http://10.117.189.55:9090/admanagement/';
     private apiMock = 'http://localhost:3000/';
     url = {};
 
     /* url config with url Mock list */
     urlMock() {
         return this.url = {
-            userLogin: 'http://10.117.189.55:9090/employeemanagement/' + 'employees/login',
+            userLogin: 'http://10.117.189.55:9090/admanagement/' + 'employees/login',
             userRegister: this.apiMock + 'doctorList',
-            schemes:  this.apiMock + 'timesheets',
-            time: this.apiMock + 'timesheets',
+            users:  this.apiMock + 'adminslots',
         };
     }
     /* url config with url Server list */
     urlApi() {
         return this.url = {
-            userLogin: this.apiHost + 'employees/login',
+            userLogin: this.apiHost + 'users/login',
             userRegister: this.apiHost + 'employees',
-            schemes: 'http://10.117.189.55:9092/timesheetmanagement/' + 'timesheets',
-            time: 'http://10.117.189.55:9092/timesheetmanagement/' + 'timesheets',
+            users:  this.apiHost + 'adminslots',
+
 
         };
     }

@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   /*  Login form controls creation */
   private createForm() {
     this.loginForm = this.fb.group({
-      employeeId: ['', Validators.required],
+      mobile: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.spinner = true;
       const postObject = {
-        employeeId: Number(this.loginForm.value.employeeId),
+        mobile: Number(this.loginForm.value.mobile),
         password: this.loginForm.value.password
       };
       /* Api call*/
@@ -53,12 +53,13 @@ export class LoginComponent implements OnInit {
         if (user.statusCode === 200) {
           const userDetails = {
             userName: user.employeeName,
-            userId: user.employeeId
+            userId: user.employeeId,
+            role: user.role
           };
           /* Stored the user details in session storage */
           sessionStorage.setItem('currentUser', JSON.stringify(userDetails));
           this.spinner = false;
-          this.router.navigate(['/management/tsms']);
+          (userDetails.role === 'ADMIN') ?  this.router.navigate(['/plans']) :  this.router.navigate(['/available-slots']);
         } else {
           this.common.alertConfig = this.common.modalConfig(
             'Error', this.userConstant.messageConstant()[user.statusCode],

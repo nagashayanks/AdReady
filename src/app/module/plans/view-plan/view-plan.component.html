@@ -1,0 +1,21 @@
+<div class="container appointment-container mt">
+    <h3 class="dataheader">Book Appointments</h3>
+    <div class="form-group" style="float: right;">
+        <button pButton type="button" label="Add Slots" (click)="addSlots()"></button>
+    </div>
+    <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="appointmentList">
+        <app-grid [gridData]="appointmentList" [gridColumnDefinition]="gridColumns" (getAction)="getAction($event)"
+            [sorting]="sorting" [pageLinks]="pageLinks" [pagination]="pagination" *ngIf="appointmentList">
+        </app-grid>
+    </div>
+    <div class="modal" [ngClass]="{'show fade': bookingFlag}">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title heading">Book Appointment</h4>
+                </div>
+            </div> 
+         </div> 
+     </div>         
+</div>
